@@ -1,0 +1,278 @@
+/* Container Styles */
+.dish-detail-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.dish-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .dish-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Dish Image */
+.dish-image-container {
+  width: 100%;
+  height: 400px;
+}
+
+.dish-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dish Information */
+.dish-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dish-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.dish-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.dish-description {
+  color: #718096;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-button {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #f7fafc;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.quantity-button:hover {
+  background-color: #edf2f7;
+}
+
+.quantity {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Error Message */
+.error-message {
+  color: #f56565;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.add-to-cart-button,
+.checkout-button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button {
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2b6cb0;
+}
+
+.add-to-cart-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cart-icon {
+  margin-right: 0.5rem;
+}
+
+.checkout-button {
+  background-color: #d63215 !important;
+  color: #ffffff;
+  border: none;
+}
+
+.checkout-button:hover {
+  background-color: #2f855a;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 3rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-card {
+  background-color: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-user {
+  font-weight: 600;
+}
+
+.review-rating {
+  display: flex;
+}
+
+.star-icon {
+  color: #ecc94b;
+  margin-left: 0.25rem;
+}
+
+.review-comment {
+  color: #4a5568;
+}
+
+.review-date {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+/* Related Dishes Section */
+.related-dishes-section {
+  margin-top: 3rem;
+}
+
+.related-dishes-container {
+  position: relative;
+}
+
+.related-dishes-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.related-dish-card {
+  flex: none;
+  width: 16rem;
+}
+
+.related-dish-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.related-dish-info {
+  margin-top: 0.5rem;
+}
+
+.related-dish-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.related-dish-price {
+  color: #4a5568;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: #edf2f7;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+/* Scrollbar Styling for Related Dishes */
+.related-dishes-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.related-dishes-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.related-dishes-list::-webkit-scrollbar-track {
+  background-color: #f7fafc;
+}

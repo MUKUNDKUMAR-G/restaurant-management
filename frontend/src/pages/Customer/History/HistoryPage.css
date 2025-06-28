@@ -1,0 +1,222 @@
+/* HistoryPage.css */
+
+.activity-history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.activity-history-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #eaeaea;
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab-icon {
+  margin-right: 5px;
+}
+
+.content .card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+.status {
+  background-color: #e0ffe0;
+  color: #2d862d;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+.card-body .item {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.card-body .total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.reservations .rating-form {
+  margin-top: 10px;
+}
+
+.rating-criterion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-criterion label {
+  width: 100px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.3s;
+}
+
+.star.active {
+  color: #ffc107;
+}
+
+.star:hover {
+  color: #ffd454;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+@media (min-width: 600px) {
+  .card-header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Styles for search bar */
+.search-bar-his {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Đặt relative để icon con có thể dùng absolute */
+  width: 250px; /* Độ rộng tổng thể của thanh search */
+}
+
+/* Ô input */
+.search-bar-his input {
+  padding: 10px 10px 10px 35px; /* Tăng padding-left để icon không che mất chữ */
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Chiếm toàn bộ độ rộng của parent */
+  box-sizing: border-box; /* Không để padding ảnh hưởng kích thước */
+}
+
+/* Icon nằm trong ô input */
+.searchid-icon {
+  position: absolute;
+  left: 10px; /* Khoảng cách icon từ bên trái */
+  top: 50%;
+  transform: translateY(-50%); /* Căn giữa icon theo chiều dọc */
+  color: #8e928f; /* Màu icon */
+  font-size: 1.2rem;
+  pointer-events: none; /* Tránh icon ảnh hưởng khi click vào input */
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.page-button {
+  background-color: #2563eb; /* Màu xanh đồng bộ */
+  color: #ffffff;
+  border: none;
+  margin: 0 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.page-button:hover {
+  background-color: #2563eb; /* Màu hover xanh đậm hơn */
+}
+
+.page-button.active {
+  background-color: #2563eb; /* Màu active */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: solid 3px #565a5a;
+}

@@ -1,0 +1,280 @@
+/* Container Styles */
+.reservation-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.reservation-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Search Bar */
+.search-bar-rs {
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  width: 250px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.search-icon-rs {
+  position: absolute;
+  left: 10px;
+  font-size: 25px;
+  color: #555;
+}
+
+/* Table Styles */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.reservation-table th,
+.reservation-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1rem;
+}
+
+.sort-button:disabled {
+  cursor: default;
+  color: #999;
+}
+
+.sort-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.active-sort.asc .sort-icon {
+  transform: rotate(0deg);
+}
+
+.active-sort.desc .sort-icon {
+  transform: rotate(180deg);
+}
+
+.code-badge {
+  padding: 0.3rem 0.6rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none; /* Remove underline from Link */
+}
+
+.reservation-link {
+  text-decoration: none;
+}
+
+.reservation-link:hover .code-badge {
+  background-color: #0056b3;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.status-waiting {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.status-in-use {
+  background-color: #00aaff;
+  color: #fff;
+}
+
+.status-completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-canceled {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Clickable Status */
+.clickable-status {
+  cursor: pointer;
+}
+
+.clickable-status:hover {
+  background-color: #e0a800; /* Darker shade on hover */
+}
+
+/* Reservation Row Styles */
+.reservation-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reservation-row:hover {
+  background-color: #f1f1f1;
+}
+
+.reservation-row:focus {
+  outline: 2px solid #007bff;
+  background-color: #f1f1f1;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-icon {
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pagination-button {
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:hover:not(.active-page) {
+  background-color: #e2e6ea;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.active-page {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.no-results {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+}
+.filter-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.status-filter {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Confirm Button */
+.confirm-res-button {
+  padding: 8px 12px;
+  background-color: #28a745; /* Màu xanh lá */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-res-button:hover {
+  background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+}
+
+.confirm-res-button:focus {
+  outline: 2px solid #155724; /* Viền khi được focus */
+}
+
+/* Cancel Button */
+.cancel-res-button {
+  padding: 8px 12px;
+  background-color: #dc3545; /* Màu đỏ */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-res-button:hover {
+  background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+}
+
+.cancel-res-button:focus {
+  outline: 2px solid #721c24; /* Viền khi được focus */
+}
+
+/* Đặt khoảng cách giữa các nút */
+.confirm-res-button,
+.cancel-res-button {
+  margin-right: 8px;
+}

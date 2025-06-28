@@ -1,0 +1,439 @@
+/* CouponCreationForm.css */
+
+/* Container */
+.reservation-container {
+  min-height: 100vh;
+  background-color: #f9fafb; /* bg-gray-50 */
+  padding: 2rem 1rem; /* py-8 px-4 */
+}
+
+@media (min-width: 640px) {
+  /* sm:px-6 */
+  .reservation-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg:px-8 */
+  .reservation-container {
+    padding: 2rem 2rem;
+  }
+}
+
+/* Wrapper */
+.reservation-wrapper {
+  max-width: 1024px; /* max-w-4xl */
+  margin: 0 auto;
+}
+
+/* Title */
+.reservation-title {
+  text-align: center;
+  font-size: 40px; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #1f2937; /* text-gray-900 */
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+/* Form */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+}
+
+/* Form Group */
+.form-group-create-slip {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-create-slip .input-container {
+  position: relative;
+}
+
+.form-group-create-slip .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%); /* Centers the icon vertically */
+  color: #ccc;
+}
+
+.form-group-create-slip .form-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px; /* Left padding adjusted for the icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't increase field size */
+  margin: 7px 0;
+}
+
+.form-group-create-slip .form-input:focus {
+  border-color: #007bff; /* Highlight on focus */
+  outline: none;
+}
+
+/* Form Label */
+.form-label {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #374151; /* text-gray-700 */
+}
+
+/* Form Input */
+.form-input {
+  margin-top: 0.25rem; /* mt-1 */
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+  background-color: #ffffff; /* bg-white */
+  color: #374151; /* text-gray-700 */
+  font-size: 0.875rem; /* sm:text-sm */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* focus:ring-blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring */
+}
+
+/* Disabled Input */
+.disabled-input {
+  background-color: #f9fafb; /* bg-gray-50 */
+  color: #6b7280; /* text-gray-700 */
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border: none;
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #ffffff; /* text-white */
+  background-color: #3b82f6; /* bg-blue-600 */
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #2563eb; /* hover:bg-blue-700 */
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring */
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 0.5rem; /* mt-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #ef4444; /* text-red-600 */
+}
+
+/* Input Error */
+.input-error {
+  border-color: #fecaca; /* border-red-300 */
+}
+
+/* Reservation Preview */
+.reservation-preview {
+  margin-top: 2rem; /* mt-8 */
+  padding: 1.5rem; /* p-6 */
+  background-color: #f9fafb; /* bg-gray-50 */
+  border-radius: 0.375rem; /* rounded-lg */
+}
+
+.preview-title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: #1f2937; /* text-gray-900 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.preview-content p {
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* text-gray-600 */
+}
+
+.preview-label {
+  font-weight: 500; /* font-medium */
+}
+
+/* Submission Alert */
+.submission-alert {
+  position: fixed;
+  top: 20px; /* bottom-4 */
+  right: 1rem; /* right-4 */
+  background-color: #10b981; /* bg-green-500 */
+  color: #ffffff; /* text-white */
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+  z-index: 1000;
+  animation: fadeInOut 3s forwards;
+}
+
+.check-icon {
+  height: 1.25rem; /* h-5 */
+  width: 1.25rem; /* w-5 */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.create-slip-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.create-slip-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  color: white;
+}
+
+.create-slip-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.create-slip-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.create-slip-main {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.label-icon {
+  margin-right: 0.5rem;
+  color: #666;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.error-border {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+textarea.input-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #357abd;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.new-reservation-btn {
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-reservation-btn:hover {
+  background: #357abd;
+}
+
+/* DatePicker Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.react-datepicker__day--selected {
+  background: #4a90e2 !important;
+  border-radius: 0.25rem;
+}
+
+.react-datepicker__day:hover {
+  background: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.react-datepicker__time-container {
+  border-left: 1px solid #ddd;
+}
+
+.react-datepicker__time-box {
+  width: 100% !important;
+}
+
+.react-datepicker__time-list-item {
+  padding: 0.5rem 1rem;
+}
+
+.react-datepicker__time-list-item:hover {
+  background: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-slip-container {
+    padding: 1rem;
+  }
+
+  .create-slip-hero {
+    padding: 2rem 0;
+  }
+
+  .create-slip-hero h1 {
+    font-size: 2rem;
+  }
+
+  .create-slip-main {
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,269 @@
+.dish-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid View */
+.dish-card.grid {
+  flex-direction: column;
+}
+
+.dish-card.grid .dish-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.dish-card.grid .dish-category-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dish-card.grid .dish-details {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card.grid .dish-info {
+  flex: 1;
+}
+
+/* List View */
+.dish-card.list {
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.dish-card.list .dish-image-container {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.dish-card.list .dish-details {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dish-card.list .dish-info {
+  margin-bottom: 1rem;
+}
+
+.dish-card.list .dish-category {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Common Styles */
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-image {
+  transform: scale(1.05);
+}
+
+.dish-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.dish-description {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dish-card.list .dish-description {
+  -webkit-line-clamp: 3;
+}
+
+.dish-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.dish-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.order-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.cart-icon {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dish-card.list {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .dish-card.list .dish-image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .dish-card.list .dish-details {
+    padding: 1.5rem;
+  }
+
+  .dish-card.list .dish-category {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dish-card.grid .dish-image-container {
+    height: 180px;
+  }
+
+  .dish-card.list .dish-image-container {
+    height: 180px;
+  }
+
+  .dish-name {
+    font-size: 1.125rem;
+  }
+
+  .dish-price {
+    font-size: 1.125rem;
+  }
+
+  .order-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+.open-modal-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.open-modal-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.branch-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.branch-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.branch-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.close-modal-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-modal-button:hover {
+  background-color: #c82333;
+}

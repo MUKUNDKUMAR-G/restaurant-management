@@ -1,0 +1,230 @@
+.invoice-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Căn trên thay vì giữa */
+}
+
+.invoice-card {
+  background-color: #fff;
+  border-radius: 0.75rem; /* Tăng border-radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tăng độ bóng */
+  overflow: hidden;
+  max-width: 900px; /* Tăng kích thước */
+  width: 100%;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem; /* Tăng padding */
+  border-bottom: 1px solid #e5e7eb; /* Thêm đường viền dưới */
+}
+
+.invoice-header h1 {
+  font-size: 2rem;
+  color: #111827;
+}
+
+.back-button {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem; /* Tăng border-radius */
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #d1d5db;
+}
+
+.invoice-content {
+  padding: 2rem;
+}
+
+.invoice-items .dish-item {
+  display: flex;
+  align-items: flex-start; /* Căn từ trên xuống để tiêu đề ngang tầm với hình */
+  gap: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  background-color: #ffffff;
+}
+
+.dish-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  flex-shrink: 0; /* Đảm bảo hình ảnh không co lại */
+}
+
+.dish-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1; /* Cho phép thông tin giãn ra */
+}
+
+.dish-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.dish-info p {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.dish-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Đẩy phần chi tiết xuống cuối */
+}
+
+.dish-pricing p {
+  margin: 0.25rem 0;
+  color: #374151;
+  font-weight: 500;
+}
+
+.review-button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+.review-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.invoice-total {
+  border-top: 2px solid #e5e7eb;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.invoice-total h2 {
+  font-size: 1.75rem;
+  color: #111827;
+}
+
+.invoice-total p {
+  font-size: 1.5rem;
+  color: #111827;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.close-button {
+  color: #6b7280;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #374151;
+}
+
+.rating .star {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #d1d5db;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+}
+
+.rating .star.active {
+  color: #fbbf24;
+}
+
+.review-text {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  resize: vertical;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.submit-button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,150 @@
+/* Container Styles */
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #daa87c, #324858);
+  padding: 1rem;
+}
+
+/* Login Box Styles */
+.admin-login-box {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.admin-login-box:hover {
+  transform: scale(1.02);
+}
+
+/* Title Styles */
+.admin-login-title {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 700;
+  text-align: center;
+  color: #2d3748; /* Gray-800 */
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Form Group Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label Styles */
+.form-label {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #4a5568; /* Gray-700 */
+  margin-bottom: 0.5rem;
+}
+
+/* Input Styles */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db; /* Gray-300 */
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #3b82f6; /* Blue-500 */
+}
+
+.input-error {
+  border-color: #f56565; /* Red-500 */
+}
+
+/* Password Input Wrapper */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: #6b7280; /* Gray-500 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.password-toggle-button:hover {
+  color: #4b5563; /* Gray-700 */
+}
+
+.password-toggle-button:focus {
+  outline: none;
+}
+
+/* Error Message Styles */
+.error-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem; /* 14px */
+  color: #f56565; /* Red-600 */
+}
+
+/* Submit Button Styles */
+.submit-button {
+  width: 100%;
+  background-color: #2563eb; /* Blue-600 */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8; /* Blue-700 */
+  transform: scale(0.98);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3b82f6; /* Blue-500 */
+}
+
+.button-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
